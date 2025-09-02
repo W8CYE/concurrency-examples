@@ -28,6 +28,8 @@ func main() {
 			patterns.RateLimiter()
 		case 5:
 			patterns.SelectTimeout()
+		case 6:
+			patterns.CircuitBreakerDemo()
 		case 0:
 			fmt.Println("Goodbye!")
 			return
@@ -44,8 +46,9 @@ func showMenu() {
 	fmt.Println("3. Pipeline")
 	fmt.Println("4. Rate Limiter")
 	fmt.Println("5. Select with Timeout")
+	fmt.Println("6. Circuit Breaker")
 	fmt.Println("0. Exit")
-	fmt.Print("Select a pattern to run (0-5): ")
+	fmt.Print("Select a pattern to run (0-6): ")
 }
 
 func getUserInput() int {
